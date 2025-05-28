@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contacto - La Gitana Eventos</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <!-- Font Awesome 6 moderna -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script defer src="js/contact.js"></script>
+
+  <style>
+    /* Botón WhatsApp flotante */
+    .float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 40px;
+      right: 40px;
+      background-color: #25d366;
+      color: white;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 2px 2px 3px #999;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+    .float:hover {
+      background-color: #128c4a;
+      color: white;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container header-container">
+    <a href="index.html" class="logo-link" aria-label="La Gitana Eventos - Inicio">
+      <img src="images/logo.png" alt="Logo La Gitana Eventos" class="logo" />
+    </a>
+    <nav class="main-nav">
+      <ul class="nav-list">
+        <li><a href="index.html" class="nav-link active">Inicio</a></li>
+
+        <li class="nav-item with-submenu">
+          <a href="servicios.html" class="nav-link">Servicios</a>
+          <ul class="submenu">
+            <li><a href="#decoracion de casetas de feria" class="submenu-link">Decoración de casetas de feria</a></li>
+            <li><a href="#servicios para eventos" class="submenu-link">Servicios para eventos </a></li>
+            
+          </ul>
+        </li>
+
+        <li><a href="about.html" class="nav-link">Quiénes somos</a></li>
+        <li><a href="contact.html" class="nav-link">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+  <!-- MAIN -->
+  <main class="main">
+    <section class="about-section container">
+      <h1 class="section-title">Quiénes Somos</h1>
+      <p class="about-intro">
+        ¡Hola! ¿Cómo estáis? Somos <strong>La Gitana Eventos</strong>, una empresa dedicada a toda clase de eventos.
+        ¿Por qué somos perfectos para vosotros? ¡Porque hacemos realidad cualquier cosa que necesitéis!
+      </p>
+
+      <!-- Servicio 1 -->
+      <div class="service-block">
+        <div class="service-text">
+          <h2 class="service-title">1. Casetas de feria</h2>
+          <p>
+            ¿A quién no le gusta una buena feria? Tenemos la caseta perfecta para ti. Contamos con decoración completa de madera:
+            barra con lámparas, botelleros, tarima para DJ, reservado, portada, varias combinaciones de pared y techo de tela,
+            todo iluminado con luces LED. Como vale más una imagen que mil palabras… ¡Os dejamos una muestra visual! 
+            Nos adaptamos a vuestras necesidades.
+          </p>
+        </div>
+        <div class="service-image">
+          <img src="images/caseta.jpg" alt="Caseta de feria decorada por La Gitana Eventos" />
+        </div>
+      </div>
+
+      <!-- Servicio 2 -->
+      <div class="service-block reverse">
+        <div class="service-text">
+          <h2 class="service-title">2. Servicios para eventos</h2>
+          <p>
+            Disponemos de máquina de palomitas, buñuelos, algodón de azúcar, carrito de gominolas, coctelería, barra libre… 
+            ¡Y no paramos de añadir opciones! Las últimas incorporaciones para los más golosos han sido crepes, gofres y dulces variados. 
+            Suena bien, ¿verdad? Además, como todos nuestros clientes nos pedían el servicio de coctelería, y… ¡Dicho y hecho!
+          </p>
+        </div>
+        <div class="service-image">
+          <img src="images/mostrador.jpg" alt="Puesto de palomitas y carrito de algodón" class="small-image" />
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <p>&copy; 2025 La Gitana Eventos. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+
+  <!-- Botón flotante WhatsApp -->
+  <a href="https://api.whatsapp.com/send?phone=5195508107&text=Hola,%20%C2%BFEn%20qu%C3%A9%20puedo%20ayudarte%3F" 
+     class="float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+</body>
+</html>

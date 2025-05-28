@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contacto - La Gitana Eventos</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  
+  <!-- Font Awesome 6 -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-pv6LhZfXbDHhw7DyCB7p1+RzlvHpMJQojmHrSLNN6V1D3dTCv9F1m6WZ84cJSlRw7jz6mL5RmOj6F2Kd3+BmOg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <link rel="stylesheet" href="css/styles.css" />
+  <script defer src="js/contact.js"></script>
+
+  <style>
+    /* ==== Estilos específicos para contacto ==== */
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #fafafa;
+      color: #333;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Header y navegación: suponemos estilos generales ya en styles.css */
+
+    main {
+      max-width: 1100px;
+      margin: 2rem auto 4rem auto;
+      padding: 0 1rem;
+    }
+
+    h1, h2 {
+      color: #25d366;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    /* Grid de formulario e info */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+    @media (max-width: 768px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Formulario */
+    .contact-form label {
+      display: block;
+      margin-top: 1.25rem;
+      font-weight: 700;
+      font-size: 1rem;
+      color: #222;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      margin-top: 0.3rem;
+      border: 1.5px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+      resize: vertical;
+      font-family: inherit;
+    }
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: #25d366;
+      outline: none;
+      box-shadow: 0 0 8px rgba(37, 211, 102, 0.4);
+    }
+
+    /* Botón enviar */
+    .btn-primary {
+      margin-top: 1.75rem;
+      background-color: #25d366;
+      border: none;
+      color: white;
+      padding: 0.85rem 1.8rem;
+      border-radius: 6px;
+      font-size: 1.15rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 6px rgba(37, 211, 102, 0.4);
+      font-family: inherit;
+      display: inline-block;
+    }
+    .btn-primary:hover,
+    .btn-primary:focus {
+      background-color: #128c4a;
+      box-shadow: 0 6px 10px rgba(18, 140, 74, 0.6);
+      outline: none;
+    }
+
+    /* Mensaje éxito */
+    .form-success {
+      margin-top: 1rem;
+      color: #128c4a;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+    .hidden {
+      display: none;
+    }
+
+    /* Información de contacto */
+    .contact-info h2 {
+      margin-top: 0;
+    }
+
+    .contact-info p, 
+    .contact-info a {
+      font-size: 1rem;
+      color: #444;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .contact-info a:hover,
+    .contact-info a:focus {
+      color: #25d366;
+      outline: none;
+      text-decoration: underline;
+    }
+
+    address.contact-address {
+      font-style: normal;
+      margin-top: 1rem;
+      color: #444;
+      line-height: 1.4;
+    }
+
+    /* Contenedor responsive para mapa con relación de aspecto */
+    .map-container {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%; /* 16:9 */
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      margin-top: 1.5rem;
+    }
+
+    .map-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      border-radius: 8px;
+    }
+
+    /* Botón flotante WhatsApp */
+    .float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 40px;
+      right: 40px;
+      background-color: #25d366;
+      color: white;
+      border-radius: 50%;
+      font-size: 30px;
+      box-shadow: 2px 2px 3px rgba(0,0,0,0.3);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+    .float:hover,
+    .float:focus {
+      background-color: #128c4a;
+      color: white;
+      outline: none;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-container">
+      <a href="index.html" class="logo-link" aria-label="La Gitana Eventos - Inicio">
+        <img src="images/logo.png" alt="Logo La Gitana Eventos" class="logo" />
+      </a>
+      <nav class="main-nav" aria-label="Menú principal">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Inicio</a></li>
+          <li class="nav-item with-submenu">
+            <a href="servicios.html" class="nav-link" aria-haspopup="true" aria-expanded="false">Servicios</a>
+            <ul class="submenu" aria-label="Submenú servicios">
+              <li><a href="#decoracion-de-casetas" class="submenu-link">Decoración de casetas de feria</a></li>
+              <li><a href="#servicios-para-eventos" class="submenu-link">Servicios para eventos</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html" class="nav-link">Quiénes somos</a></li>
+          <li><a href="contact.html" class="nav-link active" aria-current="page">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="contact-section container" aria-labelledby="contact-title">
+      <h1 id="contact-title">Contáctanos</h1>
+      <p>¿Tienes dudas, quieres pedir presupuesto o simplemente saludarnos? Rellena el formulario y te responderemos pronto.</p>
+
+      <div class="contact-grid">
+        <!-- Formulario de contacto -->
+        <form id="contact-form" class="contact-form" action="https://formspree.io/f/{tu-form-id}" method="POST" novalidate>
+          <label for="name">Nombre completo</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Tu nombre"
+            required
+            autocomplete="name"
+            minlength="2"
+            aria-required="true"
+          />
+
+          <label for="email">Correo electrónico</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="tucorreo@ejemplo.com"
+            required
+            autocomplete="email"
+            aria-required="true"
+          />
+
+          <label for="phone">Teléfono</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="Ej: 612345678"
+            pattern="^\d{9}$"
+            title="Debe tener 9 dígitos numéricos"
+            required
+            autocomplete="tel"
+            aria-required="true"
+          />
+
+          <label for="message">Mensaje</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            placeholder="Cuéntanos en qué podemos ayudarte"
+            required
+            minlength="10"
+            aria-required="true"
+          ></textarea>
+
+          <button type="submit" class="btn-primary" aria-label="Enviar mensaje de contacto">
+            Enviar mensaje
+          </button>
+
+          <p class="form-success hidden" role="alert" aria-live="polite">¡Gracias por contactarnos! Te responderemos pronto.</p>
+        </form>
+
+        <!-- Información de contacto -->
+        <aside class="contact-info" aria-label="Información de contacto">
+          <h2>También puedes encontrarnos</h2>
+
+          <p><strong>Teléfono:</strong> 
+            <a href="tel:+34603464921" aria-label="Llamar al teléfono 603 464 921">603 464 921</a> - 
+            <a href="tel:+34642285833" aria-label="Llamar al teléfono 642 28 58 33">642 28 58 33</a>
+          </p>
+
+          <p><strong>Email:</strong> 
+            <a href="mailto:eventoslagitana@gmail.com" aria-label="Enviar email a eventoslagitana@gmail.com">
+              eventoslagitana@gmail.com
+            </a>
+          </p>
+
+          <address class="contact-address">
+            <strong>Dirección:</strong><br />
+            Calle San Ignacio 6,<br />
+            Ubrique (Cádiz), España
+          </address>
+
+          <div class="map-container" aria-label="Mapa con ubicación de La Gitana Eventos">
+            <iframe
+              title="Mapa ubicación La Gitana Eventos"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.5333776993915!2d-5.983073484687642!3d37.38863037983159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd126e3d70c15eab%3A0x2c0bdc68d1a1f6f3!2sSevilla!5e0!3m2!1ses!2ses!4v1617013035072!5m2!1ses!2ses"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-container">
+      <p>&copy; 2025 La Gitana Eventos. Todos los derechos reservados.</p>
+      <nav aria-label="Navegación pie de página">
+        <ul class="footer-nav">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="about.html">Quiénes somos</a></li>
+          <li><a href="contact.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const form = document.getElementById("contact-form");
+      const successMsg = document.querySelector(".form-success");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        if (form.checkValidity()) {
+          form.reset();
+          successMsg.classList.remove("hidden");
+          setTimeout(() => successMsg.classList.add("hidden"), 5000);
+        } else {
+          form.reportValidity();
+        }
+      });
+    });
+  </script>
+
+  <!-- Botón flotante WhatsApp -->
+  <a
+    href="https://api.whatsapp.com/send?phone=34603464921&text=Hola,%20%C2%BFEn%20qu%C3%A9%20puedo%20ayudarte%3F"
+    class="float"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Contactar por WhatsApp"
