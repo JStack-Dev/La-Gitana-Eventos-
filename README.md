@@ -1,7 +1,8 @@
 # La-Gitana-Eventos-
 Mi primera pagina web.
 
-En este repositorio encontrarás el desarrollo de mi primera página web creada completamente desde cero, y qué mejor proyecto para empezar que el de mi propia empresa: La Gitana Eventos.
+¡Hola! 👋 Bienvenido/a a este repositorio donde comparto el desarrollo de la primera página web que he creado desde cero 💻.
+No podría haber elegido un proyecto más especial para empezar que el de mi propia empresa: La Gitana Eventos, dedicada a la organización de eventos y decoración de casetas de feria. Aquí combino mi pasión por la tecnología y el emprendimiento.
 
 Este sitio web aún está en construcción y lo voy actualizando conforme avanzo en mi aprendizaje y experiencia como desarrollador.
 
