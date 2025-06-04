@@ -1,0 +1,177 @@
+/* Variables de colores de marca */
+:root {
+  --color-principal: #d32525;
+  --color-principal-hover: #12248c;
+  --color-error: #ff0000;
+  --color-fondo: #fafafa;
+  --color-texto: #333;
+}
+
+/* Reset y base */
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  max-width: 1100px;
+  margin: 2rem auto 4rem auto;
+  padding: 0 1rem;
+}
+
+h1, h2 {
+  color: var(--color-principal);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* Grid formulario e info */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Formulario */
+.contact-form label {
+  display: block;
+  margin-top: 1.25rem;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #222;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-top: 0.3rem;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  resize: vertical;
+  font-family: inherit;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--color-principal);
+  outline: none;
+  box-shadow: 0 0 8px rgba(37, 211, 102, 0.4);
+}
+
+/* Botón principal */
+.btn-primary {
+  display: inline-block;
+  background-color: #fff;
+  color: var(--rojo-intenso);
+  padding: 0.75rem 2rem;
+  font-weight: 700;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(211, 47, 47, 0.4);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #1cb750;
+  color: #fff;
+  outline: none;
+}
+
+/* Mensaje éxito */
+.form-success {
+  margin-top: 1rem;
+  color: var(--color-principal-hover);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Información de contacto */
+.contact-info h2 {
+  margin-top: 0;
+}
+
+.contact-info p,
+.contact-info a {
+  font-size: 1rem;
+  color: #444;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-info a:hover,
+.contact-info a:focus {
+  color: var(--color-principal);
+  outline: none;
+}
+
+/* Dirección */
+.contact-address {
+  margin-top: 1rem;
+  font-style: normal;
+  line-height: 1.4;
+}
+
+/* Mapa */
+.map-container {
+  margin-top: 1.5rem;
+  width: 100%;
+  height: 200px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+  z-index:100;
+}
+.float:hover {
+	text-decoration: none;
+	color: #25d366;
+  background-color:#fff;
+}
+
+.my-float{
+	margin-top:16px;
+}
+
+
+

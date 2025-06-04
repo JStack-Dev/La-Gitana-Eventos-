@@ -1,0 +1,194 @@
+/* === Estilos solo para el aviso de cookies === */
+.aviso-cookies {
+  display: none;
+  background: #fff;
+  padding: 20px;
+  width: calc(100% - 40px);
+  max-width: 300px;
+  line-height: 150%;
+  border-radius: 10px;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 100;
+  padding-top: 60px;
+  box-shadow: 0px 2px 20px 10px rgba(222, 222, 222, 0.25);
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.aviso-cookies.activo {
+  display: block;
+}
+
+.aviso-cookies .galleta {
+  max-width: 100px;
+  position: absolute;
+  top: -50px;
+  left: calc(50% - 50px);
+}
+
+.aviso-cookies .titulo {
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.aviso-cookies .parrafo {
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: #333;
+}
+
+.aviso-cookies .boton {
+  width: 100%;
+  background: #595959;
+  border: none;
+  color: #fff;
+  font-family: inherit;
+  text-align: center;
+  padding: 15px 20px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s ease all;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.aviso-cookies .boton:hover {
+  background: #000;
+}
+
+.aviso-cookies .enlace {
+  color: #4DBFFF;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.aviso-cookies .enlace:hover {
+  text-decoration: underline;
+}
+
+.fondo-aviso-cookies {
+  display: none;
+  background: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  z-index: 99;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+
+.fondo-aviso-cookies.activo {
+  display: block;
+}
+
+
+/* cookie-consent.css */
+
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0; right: 0;
+  background: #222;
+  color: white;
+  padding: 1.5rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 -3px 8px rgba(0,0,0,0.4);
+  z-index: 9999;
+  text-align: center;
+}
+
+.cookie-banner p {
+  margin: 0 0 1rem;
+  font-size: 1rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  cursor: pointer;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
+  min-width: 130px;
+}
+
+.btn-accept {
+  background-color: #4CAF50;
+  color: white;
+}
+.btn-accept:hover {
+  background-color: #45a049;
+}
+
+.btn-reject {
+  background-color: #f44336;
+  color: white;
+}
+.btn-reject:hover {
+  background-color: #da190b;
+}
+
+.btn-config {
+  background-color: #2196F3;
+  color: white;
+}
+.btn-config:hover {
+  background-color: #0b7dda;
+}
+
+.cookie-config-panel {
+  margin-top: 1rem;
+  background: #333;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: left;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cookie-config-panel h3 {
+  margin-top: 0;
+  color: #ffca28;
+}
+
+.cookie-config-panel label {
+  display: block;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.config-buttons {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-save {
+  background-color: #4CAF50;
+  color: white;
+  flex: 1;
+}
+.btn-save:hover {
+  background-color: #45a049;
+}
+
+.btn-cancel {
+  background-color: #777;
+  color: white;
+  flex: 1;
+}
+.btn-cancel:hover {
+  background-color: #555;
+}
