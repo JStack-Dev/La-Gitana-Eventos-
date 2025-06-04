@@ -3,42 +3,40 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contacto - La Gitana Eventos</title>
+  <title>Inicio - La Gitana Eventos</title>
   <link rel="stylesheet" href="css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
-  <!-- Font Awesome 6 moderna -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <script defer src="js/contact.js"></script>
-
-  <style>
-    /* Botón WhatsApp flotante */
-    .float {
-      position: fixed;
-      width: 60px;
-      height: 60px;
-      bottom: 40px;
-      right: 40px;
-      background-color: #25d366;
-      color: white;
-      border-radius: 50%;
-      text-align: center;
-      font-size: 30px;
-      box-shadow: 2px 2px 3px #999;
-      z-index: 1000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      transition: background-color 0.3s ease;
-    }
-    .float:hover {
-      background-color: #128c4a;
-      color: white;
-      text-decoration: none;
-    }
-  </style>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css"
+  
 </head>
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Whatsapp-floating-button</title>
+  
+  
+  
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="css/style-whas.css" />
+
+  
+</head>
+
 <body>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<a href="https://api.whatsapp.com/send?phone=5195508107&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202." class="float" target="_blank">
+<i class="fa fa-whatsapp my-float"></i>
+</a>
+  
+  
+
+</body>
 
 <header>
   <div class="container header-container">
@@ -47,69 +45,86 @@
     </a>
     <nav class="main-nav">
       <ul class="nav-list">
-        <li><a href="index.html" class="nav-link">Inicio</a></li>
+        <li><a href="index.html" class="nav-link active">Inicio</a></li>
 
         <li class="nav-item with-submenu">
           <a href="servicios.html" class="nav-link">Servicios</a>
           <ul class="submenu">
-            <li><a href="#decoracion de casetas de feria" class="submenu-link">Decoración de casetas de feria</a></li>
+            <li><a href="#decoracion de casetas de feria" class="decoracion.html">Decoración de casetas de feria</a></li>
             <li><a href="#servicios para eventos" class="submenu-link">Servicios para eventos </a></li>
             
           </ul>
         </li>
 
-        <li><a href="about.html" class="nav-link active">Quiénes somos</a></li>
+        <li><a href="about.html" class="nav-link">Quiénes somos</a></li>
         <li><a href="contact.html" class="nav-link">Contacto</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
-  <!-- MAIN -->
-  <main class="main">
-    <section class="about-section container">
-      <h1 class="section-title">Quiénes Somos</h1>
-      <p class="about-intro">
-        ¡Hola! ¿Cómo estáis? Somos <strong>La Gitana Eventos</strong>, una empresa dedicada a toda clase de eventos.
-        ¿Por qué somos perfectos para vosotros? ¡Porque hacemos realidad cualquier cosa que necesitéis!
-      </p>
+<section id="decoracion-casetas" class="service-category">
+    <h2>Decoración de Casetas de Feria</h2>
+    <div class="featured-video">
+        <h3>Descubre nuestras decoraciones para casetas de feria</h3>
+        <p>Nos adaptamos a vuestras necesidades, y estos son algunos ejemplos de las casetas que hemos tenido el placer de decorar, creando espacios únicos y llenos de ambiente festivo.</p>
+        <video width="560" height="315" controls preload="metadata">
+    <source src="./videos/caseta san jose.mp4" type="video/mp4">
+    Tu navegador no soporta la etiqueta de video.
+</video>
+    </div>
 
-      <!-- Servicio 1 -->
-      <div class="service-block">
-        <div class="service-text">
-          <h2 class="service-title">1. Casetas de feria</h2>
-          <p>
-            ¿A quién no le gusta una buena feria? Tenemos la caseta perfecta para ti. Contamos con decoración completa de madera:
-            barra con lámparas, botelleros, tarima para DJ, reservado, portada, varias combinaciones de pared y techo de tela,
-            todo iluminado con luces LED. Como vale más una imagen que mil palabras… ¡Os dejamos una muestra visual! 
-            Nos adaptamos a vuestras necesidades.
-          </p>
+    <div class="gallery">
+        <article class="gallery-item">
+            <img src="images/caseta_ejemplo1.jpg" alt="Decoración Caseta Feria 1">
+            <div class="caption">
+                <h4>Ubicación Ejemplo 1</h4>
+                <p class="description">Breve descripción de esta decoración.</p>
+            </div>
+        </article>
+        <article class="gallery-item">
+            <img src="images/caseta_ejemplo2.jpg" alt="Decoración Caseta Feria 2">
+            <div class="caption">
+                <h4>Ubicación Ejemplo 2</h4>
+                <p class="description">Pequeña descripción de esta decoración.</p>
+            </div>
+        </article>
         </div>
-        <div class="service-image">
-          <img src="images/caseta.jpg" alt="Caseta de feria decorada por La Gitana Eventos" />
-        </div>
-      </div>
+</section>
 
-      <!-- Servicio 2 -->
-      <div class="service-block reverse">
-        <div class="service-text">
-          <h2 class="service-title">2. Servicios para eventos</h2>
-          <p>
-            Disponemos de máquina de palomitas, buñuelos, algodón de azúcar, carrito de gominolas, coctelería, barra libre… 
-            ¡Y no paramos de añadir opciones! Las últimas incorporaciones para los más golosos han sido crepes, gofres y dulces variados. 
-            Suena bien, ¿verdad? Además, como todos nuestros clientes nos pedían el servicio de coctelería, y… ¡Dicho y hecho!
-          </p>
-        </div>
-        <div class="service-image">
-          <img src="images/mostrador.jpg" alt="Puesto de palomitas y carrito de algodón" class="small-image" />
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const currentPath = window.location.pathname;
+    const currentPage = currentPath.split('/').pop() || 'index.html';
+    
+    // QUITAR 'active' de todos los enlaces
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.classList.remove('active');
+    });
+    
+    // Mapear archivos con texto de enlaces
+    const pageMap = {
+        'index.html': 'Inicio',
+        'servicios.html': 'Servicios',
+        'quienes-somos.html': 'Quiénes Somos', 
+        'contacto.html': 'Contacto'
+    };
+    
+    const targetText = pageMap[currentPage];
+    
+    // AGREGAR 'active' solo al enlace correcto
+    if (targetText) {
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            if (link.textContent.trim() === targetText) {
+                link.classList.add('active');
+            }
+        });
+    }
+});
+</script>
 
-        </div>
-      </div>
-    </section>
-  </main>
-
-
-  <!-- FOOTER -->
+<!-- FOOTER -->
   <footer class="footer">
     <div class="footer-container">
       
@@ -160,15 +175,10 @@
         <p class="eslogan">Creamos momentos felices y únicos</p>
       </div>
     </div>
-  </footer>
 
-  <script src="js/main.js"></script>
-
-  <!-- Botón flotante WhatsApp -->
-  <a href="https://api.whatsapp.com/send?phone=5195508107&text=Hola,%20%C2%BFEn%20qu%C3%A9%20puedo%20ayudarte%3F" 
-     class="float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
-    <i class="fab fa-whatsapp"></i>
+      <!-- Botón flotante de WhatsApp -->
+  <a href="https://api.whatsapp.com/send?phone=603464921&text=Hola,%20%C2%BFEn%20qu%C3%A9%20puedo%20ayudarte%3F" class="float" target="_blank" aria-label="WhatsApp">
+    <i class="fa fa-whatsapp my-float"></i>
   </a>
-
-</body>
-</html>
+  </footer>
+  

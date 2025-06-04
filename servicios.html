@@ -12,10 +12,32 @@
   <link rel="stylesheet" href="style.css" /
   
 </head>
+<!DOCTYPE html>
+<html lang="en" >
 
+<head>
+  <meta charset="UTF-8">
+  <title>Whatsapp-floating-button</title>
+  
+  
+  
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="css/style-whas.css" />
 
+  
+</head>
 
 <body>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<a href="https://api.whatsapp.com/send?phone=5195508107&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202." class="float" target="_blank">
+<i class="fa fa-whatsapp my-float"></i>
+</a>
+  
+  
+
+</body>
+
 <header>
   <div class="container header-container">
     <a href="index.html" class="logo-link" aria-label="La Gitana Eventos - Inicio">
@@ -28,8 +50,8 @@
         <li class="nav-item with-submenu">
           <a href="servicios.html" class="nav-link">Servicios</a>
           <ul class="submenu">
-            <li><a href="#decoracion de casetas de feria" class="submenu-link">Decoración de casetas de feria</a></li>
-            <li><a href="#servicios para eventos" class="submenu-link">Servicios para eventos </a></li>
+            <li><a href="decoracion.html" class="submenu-link">Decoración de casetas de feria</a></li>
+            <li><a href="maquinas.html" class="submenu-link">Servicios para eventos </a></li>
             
           </ul>
         </li>
@@ -76,3 +98,94 @@
     </article>
   </div>
 </section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const currentPath = window.location.pathname;
+    const currentPage = currentPath.split('/').pop() || 'index.html';
+    
+    // QUITAR 'active' de todos los enlaces
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.classList.remove('active');
+    });
+    
+    // Mapear archivos con texto de enlaces
+    const pageMap = {
+        'index.html': 'Inicio',
+        'servicios.html': 'Servicios',
+        'quienes-somos.html': 'Quiénes Somos', 
+        'contacto.html': 'Contacto'
+    };
+    
+    const targetText = pageMap[currentPage];
+    
+    // AGREGAR 'active' solo al enlace correcto
+    if (targetText) {
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            if (link.textContent.trim() === targetText) {
+                link.classList.add('active');
+            }
+        });
+    }
+});
+</script>
+
+<!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      
+      <!-- Logo y nombre -->
+      <div class="footer-branding">
+        <img src="images/logo.png" alt="Logo La Gitana Eventos" class="footer-logo" />
+        <h2>La Gitana Eventos</h2>
+      </div>
+
+      <!-- Información de contacto -->
+      <div class="footer-contact">
+        <p><strong>Dirección:</strong> Calle San Ignacio, Ubrique, (Cádiz)</p>
+        <p><strong>Teléfono:</strong> <a href="tel:+34603464921">+34 603 46 49 21</a></p>
+        <p><strong>Email:</strong> <a href="mailto:eventoslagitana@gmail.com">eventoslagitana@gmail.com</a></p>
+      </div>
+
+<!-- Redes sociales -->
+<div class="footer-social">
+  <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook" class="social-icon facebook" rel="noopener noreferrer">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" width="24" height="24">
+      <path d="M22.675 0h-21.35C.6 0 0 .6 0 1.326v21.348C0 23.4.6 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.466.099 2.797.143v3.24l-1.918.001c-1.504 0-1.796.715-1.796 1.763v2.313h3.59l-.467 3.622h-3.123V24h6.116C23.4 24 24 23.4 24 22.674V1.326C24 .6 23.4 0 22.675 0z"/>
+    </svg>
+  </a>
+  <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram" class="social-icon instagram" rel="noopener noreferrer">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" width="24" height="24">
+      <path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 1.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7zm5.25-2.25a1.25 1.25 0 11-2.5 0 1.25 1.25 0 012.5 0z"/>
+    </svg>
+  </a>
+  <a href="mailto:eventoslagitana@gmail.com" target="_blank" aria-label="Correo electrónico" class="social-icon email" rel="noopener noreferrer">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" width="24" height="24">
+      <path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 2v.511l-8 5.333-8-5.333V6h16zM4 18V8.489l7.682 5.12a1 1 0 001.036 0L20 8.49V18H4z"/>
+    </svg>
+  </a>
+</div>
+
+
+      <!-- Enlaces legales -->
+      <div class="footer-legal">
+        <a href="aviso-legal.html">Aviso Legal</a>
+        <a href="politica-privacidad.html">Política de Privacidad</a>
+        <a href="politica-cookies.html">Política de Cookies</a>
+        <a href="accesibilidad.html">Accesibilidad</a>
+      </div>
+
+      <!-- Derechos y eslogan -->
+      <div class="footer-bottom">
+        <p>© <span id="year"></span> La Gitana Eventos. Todos los derechos reservados.</p>
+        <p class="eslogan">Creamos momentos felices y únicos</p>
+      </div>
+    </div>
+
+      <!-- Botón flotante de WhatsApp -->
+  <a href="https://api.whatsapp.com/send?phone=603464921&text=Hola,%20%C2%BFEn%20qu%C3%A9%20puedo%20ayudarte%3F" class="float" target="_blank" aria-label="WhatsApp">
+    <i class="fa fa-whatsapp my-float"></i>
+  </a>
+  </footer>
+  
